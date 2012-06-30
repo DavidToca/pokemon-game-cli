@@ -1,7 +1,7 @@
 
 ## POKEMON GAME CLI 
 
-![screenshot](http://cl.ly/2b1z3m1W2Y3Y1e1d0B2H/pokemon-cli-screenshot.png)
+![screenshot](pokemon-cli-screenshot.png)
 
 ## TODO
 
