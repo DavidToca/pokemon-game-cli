@@ -29,7 +29,7 @@ end
 MAC = 1
 WINDOWS = 2
 LINUX = 3
-
+UNKNOWN_OS=-1
 @OS = nil
 
 def start
@@ -141,7 +141,8 @@ charizard_image=<<IMAGE
 IMAGE
 
 #clear the screen
-system("clear")
+#system("clear")
+puts "\f"
 
 @os = get_os
 
@@ -232,13 +233,14 @@ def get_response
 end
 
 def get_os
-  
-  if RUBY_PLATFORM.match(/.darwin./).size > 0
+  if RUBY_PLATFORM.match(/linux/)
+    return LINUX
+  elsif RUBY_PLATFORM.match(/darwin/)
     return MAC
-  elsif RUBY_PLATFORM.match(/.mswin./).size > 0
+  elsif RUBY_PLATFORM.match(/mswin/)
     return WINDOWS
   else
-    return LINUX
+    return nil
  end
 
 end
